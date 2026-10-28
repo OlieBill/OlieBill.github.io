@@ -185,10 +185,18 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
 
   <div class="card" style="margin-top:22px">
       <span class="tag">Private tour</span>
-      <h3>A Day as a Parisian</h3>
-      <p style="font-style:italic;margin:-2px 0 10px">Markets, chocolate and rare whisky</p>
-      <p>Start the day at the Marché d'Aligre, Paris's liveliest local market, and learn how Parisians really shop. Stop by Merguiller, a treasure trove of vintage clothes from 1900 to the 1990s. After lunch, strike a pose for a photo shoot on the Pont des Arts, warm up with the legendary hot chocolate at Angelina, and end the day at Golden Promise, a whisky bar tucked away near Montorgueil, where a single dram can cost up to&nbsp;€2,000.</p>
-      <p class="note" style="margin:12px 0">Same price and conditions as Paris Confidential&nbsp;above.</p>
+      <h3>Live Like a Parisian</h3>
+      <p style="font-style:italic;margin:-2px 0 10px">From the market to the apéritif</p>
+      <p>A full day the way Parisians really live&nbsp;it:</p>
+      <ul class="teasers">
+        <li>Morning at the Marché d'Aligre, the liveliest local market in Paris, with a stop at Merguiller, a vintage treasure trove, if you feel like&nbsp;it.</li>
+        <li>Lunch at Bistrot 31, a typical little Parisian bistro run by my childhood friend&nbsp;David.</li>
+        <li>A stroll across the Pont des Arts, with an optional photo shoot and a look at the Louvre balcony used in the 2025&nbsp;heist.</li>
+        <li>Hot chocolate at Angelina, a Paris institution since&nbsp;1903.</li>
+        <li>Monet's Water Lilies at the Musée de l'Orangerie, just across the&nbsp;Tuileries.</li>
+        <li>An apéritif on Place Dauphine, a hidden little square on the Île de la Cité, as the city lights come&nbsp;on.</li>
+      </ul>
+      <p class="note" style="margin:12px 0">Same price and conditions as Paris Confidential&nbsp;above.<br>Museum ticket not&nbsp;included.</p>
       <a class="btn gold full" id="dayBtn" href="#" target="_blank" rel="noopener">Book on WhatsApp</a>
       <p class="note">Send me your dates and the size of your group, and I'll get back to&nbsp;you.</p>
   </div>
@@ -548,7 +556,7 @@ const CODE_HASHES = ["d4af84f56c38e03eee211e8f7fc482825a855da558660751f703529078
 const wa = t => "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(t);
 document.getElementById("waBtn").href = wa("Hi Bill, I'd love to have a coffee with you in Paris. My dates: ");
 document.getElementById("crimeBtn").href = wa("Hi Bill, I'm interested in your Paris Confidential tour. My dates: ");
-document.getElementById("dayBtn").href = wa("Hi Bill, I'm interested in your A Day as a Parisian tour. My dates: ");
+document.getElementById("dayBtn").href = wa("Hi Bill, I'm interested in your Live Like a Parisian tour. My dates: ");
 document.getElementById("payBtn").href = wa("Hi Bill, I've just paid for your insider guide. Could you send me my access code?");
 
 function go(id){
