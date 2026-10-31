@@ -127,7 +127,7 @@ h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
     <p class="sub">Le guide, par un mannequin qui fait ce métier depuis 30 ans</p>
     <p class="lead">Pas besoin de payer une formation à 1000 ou 2000 euros. Ce guide te donne les étapes dans l'ordre, avec ce que j'ai appris sur le terrain.</p>
     <div class="row">
-      <a class="btn" href="https://paypal.me/Olie0109/19EUR">Acheter le guide, 19&nbsp;€ (paiement unique)</a>
+      <a class="btn" href="https://paypal.me/Olie0109/19EUR" data-pay19>Acheter le guide, 19&nbsp;€ (paiement unique)</a>
       <a class="btn ghost" href="#ch1">Lire le chapitre 1 gratuit</a>
     </div>
   </div>
@@ -201,8 +201,9 @@ h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
   </header>
 
   <p>Les 8 chapitres, les modèles de mails et la checklist casting. Tu le lis sur ton téléphone, sans rien télécharger.</p>
-  <p><a class="btn" href="https://paypal.me/Olie0109/19EUR">Payer 19&nbsp;€ avec PayPal</a></p>
-  <p>Après ton paiement, tu reçois par email le lien du guide complet.</p>
+  <p><a class="btn" href="https://paypal.me/Olie0109/19EUR" data-pay19>Payer 19&nbsp;€ avec PayPal</a></p>
+  <p>Après ton paiement, tu reviens sur cette page et le lien du guide complet s'affiche tout seul.</p>
+  <div class="note" id="payMsg" hidden></div>
 
   <nav class="pager"><a href="#home">Retour au sommaire</a></nav>
 </section>
@@ -247,6 +248,42 @@ h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
   }
   window.addEventListener('hashchange', show);
   show();
+})();
+</script>
+<script>
+(function () {
+  var API = "https://mannequin-guide.wbkearns.workers.dev";
+  var SITE = "https://oliebill.github.io/mannequin40.html";
+  var PAY = "https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=SUKDTSMEG88PW&item_name=" + encodeURIComponent("Devenir mannequin 40+, le guide") + "&amount=19.00&currency_code=EUR&no_shipping=1&rm=1&cancel_return=" + encodeURIComponent(SITE);
+  var KEY = "m40_claim";
+  function ls(k, v) { try { if (v === undefined) { return localStorage.getItem(k); } localStorage.setItem(k, v); } catch (e) { return null; } }
+  function rnd(n) { var a = "abcdefghijklmnopqrstuvwxyz0123456789", r = crypto.getRandomValues(new Uint8Array(n)), s = ""; for (var i = 0; i < n; i++) { s += a[r[i] % a.length]; } return s; }
+  var msg = document.getElementById("payMsg");
+  function say(html) { if (!msg) { return; } msg.hidden = false; msg.innerHTML = html; }
+  var btns = document.querySelectorAll("[data-pay19]");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function (e) {
+      e.preventDefault();
+      var t = rnd(24); ls(KEY, t);
+      location.href = PAY + "&custom=" + t + "&return=" + encodeURIComponent(SITE + "?claim=" + t) + "&notify_url=" + encodeURIComponent(API + "/ipn");
+    });
+  }
+  function check(t, tries, quiet) {
+    fetch(API + "/claim?t=" + encodeURIComponent(t)).then(function (r) { return r.json(); }).then(function (d) {
+      if (d && d.paid && d.url) {
+        say('<h3>Paiement reçu, merci !</h3><p><a class="btn" href="' + d.url + '">Ouvrir mon guide</a></p><p>Garde cette page en favori pour retrouver ton guide.</p>');
+      } else if (tries > 0) {
+        say("<p>Nous vérifions ton paiement, cela prend quelques secondes.</p>");
+        setTimeout(function () { check(t, tries - 1, quiet); }, 4000);
+      } else if (!quiet) {
+        say("<p>Ton paiement n'est pas encore confirmé. Recharge cette page dans une minute. Si rien n'apparaît, écris-moi à wbkearns@icloud.com avec le reçu PayPal.</p>");
+      }
+    }).catch(function () { if (!quiet) { say("<p>Vérification impossible pour le moment. Recharge cette page dans une minute.</p>"); } });
+  }
+  var q = new URLSearchParams(location.search).get("claim");
+  var t = q || ls(KEY);
+  if (q) { ls(KEY, q); location.hash = "#buy"; check(q, 20, false); }
+  else if (t) { check(t, 0, true); }
 })();
 </script>
 </body>
