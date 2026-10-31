@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Devenir mannequin 40+ : le guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root {
+  --bg: #EEF0EF;
+  --ink: #12161C;
+  --muted: #4B5563;
+  --frame: #FFFFFF;
+  --navy: #1E3A5F;
+  --on-navy: #FFFFFF;
+  --line: #C9D0D5;
+  --soft: #E3E7EA;
+  --head: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101418;
+    --ink: #ECEFF1;
+    --muted: #A3ADB8;
+    --frame: #181E25;
+    --navy: #8FB4E3;
+    --on-navy: #0E1A2B;
+    --line: #2A323B;
+    --soft: #1C232B;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101418;
+  --ink: #ECEFF1;
+  --muted: #A3ADB8;
+  --frame: #181E25;
+  --navy: #8FB4E3;
+  --on-navy: #0E1A2B;
+  --line: #2A323B;
+  --soft: #1C232B;
+  color-scheme: dark;
+}
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 38rem; margin: 0 auto; padding: 0 1.25rem 4rem; }
+h1, h2, h3 { font-family: var(--head); font-weight: 700; line-height: 1.12; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+p { margin: 0 0 1rem; text-wrap: pretty; }
+ul, ol { margin: 0 0 1.1rem; padding-left: 1.3rem; }
+li { margin-bottom: 0.45rem; text-wrap: pretty; }
+a { color: var(--navy); }
+.view { display: none; }
+.view.on { display: block; }
+
+/* barre du haut */
+.bar { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 0; font-family: var(--head); font-size: 0.95rem; }
+.bar a { color: var(--ink); text-decoration: none; font-weight: 500; }
+.bar .where { color: var(--muted); }
+
+/* accueil */
+.hero { padding: 2.2rem 0 1.6rem; }
+.hero h1 { font-size: clamp(1.55rem, 8vw, 2.9rem); white-space: nowrap; }
+.hero .sub { font-family: var(--head); font-size: clamp(1.05rem, 4.6vw, 1.4rem); font-weight: 500; color: var(--muted); margin: 0.7rem 0 0; line-height: 1.3; text-wrap: balance; }
+.hero .lead { margin: 1.4rem 0 1.6rem; }
+.row { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
+.btn { display: inline-block; font-family: var(--head); font-weight: 700; font-size: 1.05rem; padding: 0.85rem 1.4rem; border-radius: 3px; text-decoration: none; background: var(--navy); color: var(--on-navy); border: 2px solid var(--navy); }
+.btn.ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn:focus-visible, a:focus-visible, .tile:focus-visible { outline: 3px solid var(--navy); outline-offset: 3px; }
+.price { font-family: var(--head); font-weight: 700; font-size: 1.25rem; }
+
+h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
+.sheet { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem; margin: 0 0 1.4rem; }
+.tile { display: flex; flex-direction: column; justify-content: space-between; min-height: 8.2rem; padding: 0.7rem 0.8rem 0.8rem; background: var(--frame); border: 1px solid var(--line); border-bottom-width: 1.6rem; text-decoration: none; color: var(--ink); }
+.tile .n { font-family: var(--head); font-weight: 700; font-size: 1.9rem; color: var(--navy); line-height: 1; margin-bottom: 0.6rem; }
+.tile .t { font-family: var(--head); font-weight: 500; font-size: 0.98rem; line-height: 1.25; text-wrap: balance; }
+
+.note { border-left: 4px solid var(--navy); background: var(--soft); padding: 1rem 1.1rem; margin: 1.6rem 0; }
+.note p:last-child { margin-bottom: 0; }
+.note h3 { font-size: 1.15rem; margin-bottom: 0.55rem; }
+.frame { background: var(--frame); border: 1px solid var(--line); padding: 1.2rem 1.2rem 1.3rem; margin: 1.6rem 0; }
+.frame h3 { font-size: 1.25rem; margin-bottom: 0.6rem; }
+.frame p:last-child { margin-bottom: 0; }
+
+/* chapitres */
+.chead { padding: 1.4rem 0 1.2rem; border-bottom: 1px solid var(--line); margin-bottom: 1.6rem; }
+.chead .num { font-family: var(--head); font-weight: 700; font-size: 3.2rem; line-height: 1; color: var(--navy); display: block; margin-bottom: 0.5rem; }
+.chead h1 { font-size: clamp(1.6rem, 7.4vw, 2.5rem); }
+.chead .sub { font-family: var(--head); font-weight: 500; color: var(--muted); font-size: 1.12rem; margin: 0.6rem 0 0; line-height: 1.3; text-wrap: balance; }
+.view h2 { font-size: 1.3rem; margin: 2rem 0 0.7rem; }
+.view h3.small { font-size: 1.08rem; margin: 1.5rem 0 0.4rem; }
+.mail { background: var(--frame); border: 1px solid var(--line); padding: 1rem 1.1rem; margin: 0.8rem 0 1.2rem; white-space: pre-wrap; font-size: 1rem; line-height: 1.55; overflow-wrap: anywhere; }
+.mail .who { display: block; font-family: var(--head); font-weight: 700; margin-bottom: 0.5rem; color: var(--navy); }
+.strong-block p { font-weight: 600; }
+.pager { display: flex; justify-content: space-between; gap: 0.8rem; margin-top: 2.6rem; padding-top: 1.2rem; border-top: 1px solid var(--line); }
+.pager a { font-family: var(--head); font-weight: 700; text-decoration: none; color: var(--ink); }
+.pager a.next { margin-left: auto; text-align: right; }
+.foot { margin-top: 3rem; font-family: var(--head); font-size: 0.9rem; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) {
+  .tile { transition: transform 0.15s ease; }
+  .tile:active { transform: scale(0.98); }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ACCUEIL -->
+<section class="view" id="v-home">
+  <div class="hero">
+    <h1>Devenir mannequin 40+</h1>
+    <p class="sub">Le guide, par un mannequin qui fait ce métier depuis 30 ans</p>
+    <p class="lead">Pas besoin de payer une formation à 1000 ou 2000 euros. Ce guide te donne les étapes dans l'ordre, avec ce que j'ai appris sur le terrain.</p>
+    <div class="row">
+      <a class="btn" href="#ch1">Lire le guide</a>
+    </div>
+  </div>
+
+  <h2 class="sec">Dans le guide</h2>
+  <div class="sheet">
+    <a class="tile" href="#ch1"><span class="n">1</span><span class="t">Le marché 40+ : qui recrute et pourquoi</span></a>
+    <a class="tile" href="#ch2"><span class="n">2</span><span class="t">Savoir quel mannequin tu es</span></a>
+    <a class="tile" href="#ch3"><span class="n">3</span><span class="t">Tes premières photos, même avec un iPhone</span></a>
+    <a class="tile" href="#ch4"><span class="n">4</span><span class="t">Démarcher par écrit, avec des mails prêts à copier</span></a>
+    <a class="tile" href="#ch5"><span class="n">5</span><span class="t">Réussir tes castings, chez toi ou en présentiel</span></a>
+    <a class="tile" href="#ch6"><span class="n">6</span><span class="t">Contrats, paiement et statut fiscal</span></a>
+    <a class="tile" href="#ch7"><span class="n">7</span><span class="t">Instagram et LinkedIn : à quoi ils servent vraiment</span></a>
+    <a class="tile" href="#ch8"><span class="n">8</span><span class="t">Tenir dans la durée, sans tout quitter</span></a>
+  </div>
+
+  <div class="note">
+    <h3>Ce que tu n'y trouveras pas</h3>
+    <p>Des promesses. Très peu de gens vivent à 100% du mannequinat, et je te dis comment le faire sans prendre de risque.</p>
+  </div>
+
+  <div class="frame">
+    <h3>Envie d'aller plus loin ?</h3>
+    <p>30 minutes avec moi, pour 50&nbsp;€. Tu m'envoies tes photos, je te dis quel est ton style, je te donne la direction artistique de ton premier test, et je te dirige vers le photographe qui te correspond.</p>
+    <p><a class="btn ghost" href="#consulting">Voir le consulting</a></p>
+  </div>
+
+  <h2 class="sec">Qui écrit ce guide</h2>
+  <p>Je m'appelle William, j'ai 62 ans. Je suis mannequin depuis 30 ans et j'ai travaillé dans 20 à 25 pays. Tout ce qui est dans ce guide, je l'ai vécu.</p>
+  <p class="foot">Devenir mannequin 40+ : le guide</p>
+</section>
+
+<!-- CHAPITRE 1 -->
+<section class="view" id="v-ch1">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 1 sur 8</span></div>
+  <header class="chead">
+    <span class="num">1</span>
+    <h1>Le marché 40+</h1>
+    <p class="sub">Qui recrute et pourquoi ?</p>
+  </header>
+
+  <p>Les marques ne cherchent pas un mannequin de 20 ans, elles cherchent un client crédible. Les 40 ans+ ont le pouvoir d'achat, donc les annonceurs ont besoin de visages auxquels ils s'identifient.</p>
+
+  <h2>Les secteurs qui recrutent le plus</h2>
+  <ul>
+    <li>Banque, assurance, mutuelle, retraite</li>
+    <li>Santé, pharmacie, bien-être</li>
+    <li>Optique et audition</li>
+    <li>Immobilier et résidences seniors</li>
+    <li>Voyage, croisière, hôtellerie</li>
+    <li>Mode, montres, bijoux, cosmétique</li>
+    <li>Automobile, énergie, rénovation</li>
+  </ul>
+  <p>Les besoins sont locaux autant que nationaux : une PME qui n'a pas d'agence de pub cherche un visage à petit budget, et c'est souvent là que démarre un mannequin senior.</p>
+
+  <h2>À 40 ans+, tu fais du lifestyle</h2>
+  <p>Le type de mannequinat dépend de ton âge. Quand on est jeune, on fait de la mode : les magazines, les défilés, les fashion shows. À 40 ans+, le travail se trouve ailleurs.</p>
+  <p><strong>En print</strong>, c'est-à-dire en photo, tu fais du lifestyle : monsieur ou madame tout le monde, mais en un peu mieux. Quelqu'un de vrai, de naturel, qui ressemble au client de la marque, avec une belle allure et une vraie présence.</p>
+  <p><strong>Ensuite, tu fais de la vidéo</strong> : des vidéos corporate, de la pub télévision et des pubs diverses.</p>
+  <p>C'est ça que les agences et les clients veulent voir : des gens crédibles dans la vie de tous les jours. Ce n'est pas un second choix, c'est le plus gros marché pour ton âge.</p>
+
+  <nav class="pager"><span></span><a class="next" href="#ch2">Chapitre 2 : savoir quel mannequin tu es</a></nav>
+</section>
+
+<!-- CHAPITRE 2 -->
+<section class="view" id="v-ch2">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 2 sur 8</span></div>
+  <header class="chead">
+    <span class="num">2</span>
+    <h1>Savoir quel mannequin tu es</h1>
+  </header>
+
+  <p>J'ai 62 ans, 30 ans de métier, et j'ai travaillé dans 20 à 25 pays. Voilà ce que j'ai appris : on ne m'a jamais appelé parce que j'étais « un mannequin », mais parce que j'avais un visage précis pour un besoin précis.</p>
+  <p>À 40 ans+, tu n'as plus besoin de ressembler à un mannequin de 20 ans : ton visage, tes cheveux et ton allure sont ce que les clients achètent.</p>
+
+  <h2>Les 5 étapes</h2>
+  <h3 class="small">Étape 1 : regarde ce qui se voit chez toi</h3>
+  <p>Prends une feuille. Note tes cheveux (blancs, gris, longs, courts), ta barbe ou non, ton regard, ta silhouette. Tu notes seulement ce qui se voit, sans juger.</p>
+  <h3 class="small">Étape 2 : fais-toi décrire par 3 personnes</h3>
+  <p>Demande à 3 personnes honnêtes : « Si tu me croisais dans la rue, tu penserais que je fais quel métier ? » Les réponses possibles : chef d'entreprise, médecin, artiste, sportif, grand-père gentil. Note ce qu'elles disent.</p>
+  <h3 class="small">Étape 3 : garde la réponse qui revient</h3>
+  <p>Si 2 personnes sur 3 disent « chef d'entreprise », c'est ton type. Ne cherche pas à être ce que tu n'es pas : ça se voit sur les photos.</p>
+  <h3 class="small">Étape 4 : choisis des vêtements dans lesquels tu es à l'aise</h3>
+  <p>Chef d'entreprise : costume, chemise. Artiste : veste en cuir, tweed, tout noir. Sportif : tenue de sport. Prends des vêtements que tu portes déjà et qui te vont vraiment.</p>
+  <h3 class="small">Étape 5 : écris ta phrase en une ligne</h3>
+  <p>Exemple : « Homme de 62 ans, cheveux blancs, allure d'homme d'affaires élégant. » Tu l'utiliseras dans tous tes mails et sur tes fiches d'agence.</p>
+
+  <nav class="pager"><a href="#ch1">Chapitre 1</a><a class="next" href="#ch3">Chapitre 3 : tes premières photos</a></nav>
+</section>
+
+<!-- CHAPITRE 3 -->
+<section class="view" id="v-ch3">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 3 sur 8</span></div>
+  <header class="chead">
+    <span class="num">3</span>
+    <h1>Tes premières photos</h1>
+    <p class="sub">Ton premier test, même avec un iPhone</p>
+  </header>
+
+  <p>C'est la seule vraie dépense du parcours, et elle ne coûte pas une formation. Ne commence pas par un book complet : fais d'abord un test.</p>
+
+  <h2>Comment choisir ton photographe</h2>
+  <ol>
+    <li>Regarde son Instagram ou son site : il doit avoir déjà photographié des visages matures, au naturel.</li>
+    <li>Écris-lui un message court : tu veux un test portrait, tu demandes son tarif avant de réserver.</li>
+    <li>Compare 2 ou 3 photographes avant de choisir.</li>
+  </ol>
+
+  <h2>Comment préparer ton test</h2>
+  <ol>
+    <li>Apporte 3 tenues simples que tu portes déjà.</li>
+    <li>Demande un portrait, un plan américain, une silhouette, un sourire et un visage sérieux.</li>
+    <li>Garde les 10 meilleures photos.</li>
+    <li>Ne paie jamais un book complet avant d'avoir fait ce premier test.</li>
+  </ol>
+
+  <h2>Pas encore de photos ? Commence avec un iPhone</h2>
+  <p>Si tu débutes, pas besoin de payer un photographe tout de suite. Fais tes premières photos avec un iPhone assez récent.</p>
+  <ol>
+    <li>Demande à un ami ou à un proche qui te connaît bien de te photographier. Tu seras plus à l'aise, et le résultat sera meilleur.</li>
+    <li>Ne choisis pas tes tenues dans ta garde-robe au hasard. Prends des vêtements qui te vont vraiment, ou emprunte à des amis.</li>
+    <li>Choisis un thème et reste dessus : la campagne, une journée à la mer, une journée en montagne, une balade à cheval.</li>
+    <li>Vise l'élégance, surtout à 40 ans+. Pas de tonnes de maquillage pour cette première série.</li>
+  </ol>
+  <p>Quand tes premières images plaisent à l'agence, c'est elle qui t'envoie chez un photographe. Elle peut aussi déduire le test de tes prochains cachets.</p>
+
+  <div class="frame">
+    <h3>Quel photographe pour quel mannequin ?</h3>
+    <p>Un bon photographe pour une personne peut être le mauvais pour une autre. Le choix dépend de ton style, mais aussi de ce que tu as déjà dans ton book, de ce qui lui manque, et du créneau que tu vises : publicité, mode, corporate, lifestyle.</p>
+    <p>J'ai travaillé avec plusieurs photographes que je connais personnellement, et j'ai appris à mes dépens lequel convient à quoi. Ces adresses ne sont pas dans ce guide, parce qu'elles ne se donnent pas sans connaître ton profil. Pendant un consulting de 30 minutes, je regarde tes photos, je te demande ce que tu vises, et je te dirige vers le photographe qui correspond, avec un bon rapport qualité prix.</p>
+    <p><a href="#consulting">Voir le consulting</a></p>
+  </div>
+
+  <nav class="pager"><a href="#ch2">Chapitre 2</a><a class="next" href="#ch4">Chapitre 4 : démarcher par écrit</a></nav>
+</section>
+
+<!-- CHAPITRE 4 -->
+<section class="view" id="v-ch4">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 4 sur 8</span></div>
+  <header class="chead">
+    <span class="num">4</span>
+    <h1>Démarcher par écrit</h1>
+    <p class="sub">Agences, directeurs de casting et PME locales</p>
+  </header>
+
+  <p>Aujourd'hui, personne n'a le temps de décrocher le téléphone ni de lire un flyer. Ce qui marche, c'est un message court, bien ciblé, envoyé par écrit. Voici comment faire, étape par étape.</p>
+  <p><strong>Ne démarche jamais une agence sans photos.</strong> Un message sans images n'est pas lu.</p>
+
+  <h2>Étape 1 : prépare ton dossier</h2>
+  <p>Avant d'écrire à qui que ce soit, rassemble dans un même dossier sur ton téléphone :</p>
+  <ol>
+    <li>Tes 10 meilleures photos : en portrait, en plan américain et en silhouette.</li>
+    <li>Tes polaroids (voir ci-dessous).</li>
+    <li>Tes mensurations et ta taille.</li>
+    <li>Ta phrase en une ligne, celle du chapitre 2.</li>
+  </ol>
+
+  <h3 class="small">Les polaroids : à joindre à chaque mail</h3>
+  <p>Que tu envoies un test fait avec un photographe, avec un ami ou avec un proche, une agence te demandera systématiquement des polaroids. Joins-les dès le premier mail.</p>
+  <p>Ce sont des photos toutes simples, prises le jour même :</p>
+  <ul>
+    <li>Frais du jour : pris le jour de l'envoi, pas des anciennes photos.</li>
+    <li>Sans maquillage, sans retouche, sans filtre.</li>
+    <li>Cheveux simples, vêtements simples et ajustés, fond uni.</li>
+    <li>Un ami ou un proche les prend avec ton téléphone.</li>
+  </ul>
+  <p>Les 5 photos à faire : une en pied, une de trois quarts, une de profil, une de face et une souriante.</p>
+
+  <h2>Étape 2 : fais ta liste de 10 cibles</h2>
+  <p>Cherche sur Internet les agences de mannequins de ta ville, puis des grandes villes proches. Vérifie qu'elles ont une catégorie pour les 40 ans+, ou qu'elles montrent déjà des visages matures. Pour chaque agence, note le nom, la ville et l'email ou le lien du formulaire de contact. Ajoute les directeurs de casting de ta région et les PME locales qui ont besoin d'images : opticiens, hôtels, résidences seniors, assurances.</p>
+
+  <h2>Étape 3 : écris le message</h2>
+  <p>Il doit tenir en 5 lignes :</p>
+  <ol>
+    <li>Ton prénom et ton âge.</li>
+    <li>Ta phrase en une ligne.</li>
+    <li>Pourquoi tu les contactes, eux précisément.</li>
+    <li>Tes photos et tes polaroids en pièce jointe.</li>
+    <li>Ta disponibilité et tes coordonnées.</li>
+  </ol>
+
+  <h2>Étape 4 : envoie par écrit, jamais par téléphone</h2>
+  <p>Utilise l'email, le formulaire de contact du site ou LinkedIn. N'envoie jamais un message identique à toutes les agences : change au moins la première phrase.</p>
+
+  <h3 class="small">Dis toujours où tu habites</h3>
+  <p>Quand tu écris à une agence parisienne, indique ta ville dès le message. Cacher ton adresse ne sert à rien, elle la demandera de toute façon.</p>
+  <p>Habiter en province est souvent un obstacle pour une agence de Paris, parce qu'elle veut pouvoir t'envoyer à un casting rapidement. Mais aujourd'hui beaucoup de castings se font en ligne, par photo ou par vidéo. Dans ton message, précise donc deux choses :</p>
+  <ol>
+    <li>Que tu peux faire des castings à distance, par vidéo.</li>
+    <li>Si tu peux venir à Paris, avec quel préavis et combien de jours par mois.</li>
+  </ol>
+  <p>Si tu es loin de Paris, vise aussi les agences de ta région et des grandes villes proches, où ton adresse est un avantage.</p>
+
+  <h2>Étape 5 : relance une seule fois</h2>
+  <p>Si tu n'as pas de réponse après 10 jours, envoie un message très court. Si tu n'as toujours rien, passe à la cible suivante, sans insister.</p>
+
+  <h2>Le rendez-vous à l'agence avant de signer</h2>
+  <p>Avant de te signer, une agence veut presque toujours te voir en vrai. Les photos ouvrent la porte, mais c'est ce rendez-vous qui décide. Que tu sois un homme ou une femme, les règles sont les mêmes.</p>
+  <h3 class="small">Comment te présenter</h3>
+  <ol>
+    <li>Sois naturel : l'agence veut voir ton vrai visage, pas un personnage.</li>
+    <li>Pas trop de maquillage, ou aucun.</li>
+    <li>Pas de vêtements vulgaires : une tenue élégante et simple.</li>
+    <li>Pas de grosse coiffure, et pas 10 tonnes de gel ou de cire dans les cheveux.</li>
+    <li>Sois tranquille, à l'aise, à la cool : une personne détendue plaît plus qu'une personne qui force.</li>
+  </ol>
+  <h3 class="small">Dis la vérité, sans rien cacher</h3>
+  <p>Parle franchement de ta vie : ce que tu fais, ton métier, ta situation, tes aspirations et ce que tu attends du mannequinat. Une agence travaille mieux avec quelqu'un d'honnête qu'avec quelqu'un qui cache des choses et qu'elle découvre plus tard.</p>
+
+  <h2>Les erreurs à éviter</h2>
+  <ol>
+    <li>Envoyer plus de 10 photos : les agences n'ouvrent pas.</li>
+    <li>Écrire un long message sur ta vie.</li>
+    <li>Dire que tu es « disponible pour tout » : on veut un profil précis.</li>
+    <li>Payer une agence pour être inscrit : une vraie agence ne te fait pas payer l'inscription.</li>
+  </ol>
+
+  <div class="frame">
+    <h3>Pour aller plus loin</h3>
+    <p>Quelles agences répondent vraiment aux 40 ans+, comment tourner le message selon l'agence, et à qui l'adresser : je donne tout ça pendant le consulting de 30 minutes.</p>
+    <p><a href="#consulting">Voir le consulting</a></p>
+  </div>
+
+  <h2>Bonus : modèles de mails</h2>
+  <p>Remplace ce qui est entre crochets, puis change au moins la première phrase pour chaque destinataire.</p>
+
+  <div class="mail"><span class="who">Mail 1 : premier contact avec une agence</span>Objet : Candidature mannequin, [ton prénom], [ton âge] ans, [ta ville]
+
+Bonjour,
+
+Je m'appelle [prénom], j'ai [âge] ans et j'habite à [ville]. [Ta phrase en une ligne.]
+
+Je vous écris parce que votre agence travaille avec des profils lifestyle et matures, et je pense pouvoir correspondre à vos clients.
+
+Vous trouverez en pièce jointe mes photos (portrait, plan américain, silhouette) ainsi que mes polaroids du jour. Je peux faire des castings à distance, en vidéo, et me déplacer à [ville de l'agence] avec [préavis].
+
+Je reste disponible pour vous rencontrer.
+
+Cordialement,
+[Prénom, nom]
+[Téléphone, email]</div>
+
+  <div class="mail"><span class="who">Mail 2 : relance, après 10 jours</span>Objet : Re : Candidature mannequin, [ton prénom]
+
+Bonjour,
+
+Je me permets de vous relancer au sujet de ma candidature envoyée le [date]. Je reste disponible pour un rendez-vous ou un casting vidéo.
+
+Cordialement,
+[Prénom, nom]</div>
+
+  <div class="mail"><span class="who">Mail 3 : directeur de casting ou PME locale</span>Objet : Profil [âge] ans, [ville], pour vos projets
+
+Bonjour,
+
+Je suis mannequin, j'ai [âge] ans et j'habite à [ville]. Si vous cherchez un visage naturel pour vos images, vous trouverez en pièce jointe mes photos ainsi que mes polaroids du jour.
+
+Je reste disponible si un projet vous intéresse.
+
+Cordialement,
+[Prénom, nom]
+[Téléphone, email]</div>
+
+  <p><strong>Avant d'envoyer :</strong> change au moins la première phrase pour chaque destinataire, relis, et vérifie que les photos et les polaroids sont bien joints.</p>
+
+  <nav class="pager"><a href="#ch3">Chapitre 3</a><a class="next" href="#ch5">Chapitre 5 : les castings</a></nav>
+</section>
+
+<!-- CHAPITRE 5 -->
+<section class="view" id="v-ch5">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 5 sur 8</span></div>
+  <header class="chead">
+    <span class="num">5</span>
+    <h1>Les castings</h1>
+    <p class="sub">En présentiel ou en vidéo chez toi</p>
+  </header>
+
+  <h2>Les castings en présentiel</h2>
+  <p>Il y en a encore, surtout dans les grandes villes : Paris avant tout, parfois Lyon. Si tu habites loin, dis à ton agence combien de jours par mois tu peux venir.</p>
+
+  <h2>Les castings en vidéo, chez toi</h2>
+  <p>Aujourd'hui, la majorité se fait en vidéo. Tu te filmes chez toi et tu envoies la vidéo. Ce que tu envoies compte beaucoup, parce que tu n'es pas seul sur le casting : d'autres candidats envoient aussi leur vidéo. Mets toutes les chances de ton côté.</p>
+
+  <h3 class="small">Ce qu'il te faut</h3>
+  <ol>
+    <li><strong>Un petit trépied</strong> pour fixer ton téléphone. On en trouve sur Amazon pour moins de 10 euros. Ne tiens jamais ton téléphone à la main.</li>
+    <li><strong>Une petite lumière</strong>, si tu veux, à poser à côté du téléphone. Elle éclaire ton visage de façon douce, surtout l'hiver, quand la pièce est sombre.</li>
+    <li><strong>Un fond épuré.</strong> C'est très important. Place-toi devant un mur uni, blanc, blanc cassé ou gris. Pas de meuble, pas de tableau, pas de désordre derrière toi : l'attention doit rester sur ton visage.</li>
+  </ol>
+
+  <h3 class="small">Sans matériel : utilise la fenêtre</h3>
+  <ol>
+    <li>Place-toi face à la fenêtre, de façon que la lumière du jour tombe sur ton visage.</li>
+    <li>Si le soleil tape directement et que la lumière est dure, recule un peu ou attends qu'elle soit plus douce.</li>
+    <li>Regarde ton image sur l'écran avant de filmer : si ton visage est bien éclairé, c'est bon.</li>
+  </ol>
+
+  <h3 class="small">À retenir</h3>
+  <p>Une bonne lumière, un fond épuré et un téléphone stable valent mieux qu'un décor compliqué. Suis toujours les consignes précises de l'agence ou du casting.</p>
+
+  <h2>Bonus : la checklist casting vidéo</h2>
+  <p>Avant d'envoyer ta vidéo, vérifie :</p>
+  <ol>
+    <li>Le téléphone est fixé sur le trépied, il ne bouge pas.</li>
+    <li>La lumière est bonne : ton visage est éclairé, face à une fenêtre ou avec une petite lumière.</li>
+    <li>Tu as regardé ton image sur l'écran avant de filmer.</li>
+    <li>Le fond est épuré : un mur uni blanc, blanc cassé ou gris, sans rien derrière toi.</li>
+    <li>Ta tenue est simple et élégante, ton visage est naturel.</li>
+    <li>Tu as suivi les consignes précises de l'agence ou du casting.</li>
+    <li>Tu as réécouté ta vidéo : on t'entend bien, tu es à l'aise.</li>
+    <li>Tu l'as envoyée avant la date limite.</li>
+  </ol>
+
+  <div class="frame">
+    <h3>Pour aller plus loin</h3>
+    <p>Ce que les directeurs de casting regardent vraiment dans une vidéo, et comment bien tourner chaque type de casting : je te le dis pendant le consulting de 30 minutes.</p>
+    <p><a href="#consulting">Voir le consulting</a></p>
+  </div>
+
+  <nav class="pager"><a href="#ch4">Chapitre 4</a><a class="next" href="#ch6">Chapitre 6 : contrats et paiement</a></nav>
+</section>
+
+<!-- CHAPITRE 6 -->
+<section class="view" id="v-ch6">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 6 sur 8</span></div>
+  <header class="chead">
+    <span class="num">6</span>
+    <h1>Contrats et paiement</h1>
+    <p class="sub">Avant de signer, avant d'accepter un job, et le statut fiscal</p>
+  </header>
+
+  <h2>Avant de signer</h2>
+  <ol>
+    <li>Lis le contrat en entier, chez toi, sans te presser. Le pourcentage que prend l'agence y est indiqué.</li>
+    <li>Vérifie la durée du contrat et comment le quitter.</li>
+    <li>Ne paie jamais pour être inscrit. Une vraie agence gagne sa commission sur tes jobs.</li>
+    <li>Une agence peut t'envoyer chez un photographe faire un test, si elle le juge utile. Dans ce cas, le coût du test est déduit de tes prochains cachets.</li>
+  </ol>
+
+  <h3 class="small">L'exclusivité</h3>
+  <p>Une agence ne l'impose pas. Si tu donnes l'exclusivité à une agence, elle devient ton agence mère. Il n'y a ni durée ni territoire attachés à l'exclusivité.</p>
+
+  <h2>Avant d'accepter un job</h2>
+  <ol>
+    <li>Demande le tarif de la journée ou de la demi-journée.</li>
+    <li>Demande où, comment et combien de temps les images seront utilisées : une affiche, un site, une pub télé, pour combien de mois. Plus l'utilisation est large, plus le tarif doit être élevé.</li>
+    <li>Demande la date de paiement et comment tu seras payé.</li>
+  </ol>
+
+  <h2>Le paiement</h2>
+  <p>Le client paie l'agence, puis l'agence te paie : compte souvent plusieurs semaines. Garde une trace écrite de chaque job (date, client, montant). Les tarifs varient beaucoup selon le client, le pays et l'utilisation des images.</p>
+
+  <h2>Le statut fiscal : parle à un comptable</h2>
+  <p>Avant de gagner ton premier cachet, rapproche-toi d'un comptable pour savoir quel statut prendre. Beaucoup de gens se demandent s'ils doivent devenir auto-entrepreneur, mais le régime des mannequins est différent.</p>
+  <p><strong>En France :</strong> tu es souvent salarié par les agences françaises, avec des cotisations importantes à payer.</p>
+  <p><strong>À l'étranger :</strong> tu peux aussi être amené à travailler pour des agences étrangères. Dans ce cas, il faut savoir comment déclarer tes revenus étrangers dans ta déclaration française.</p>
+  <p>C'est un sujet complexe, mais ce n'est pas urgent. Tu le règles avec ton comptable après tes premiers jobs, pas avant.</p>
+
+  <nav class="pager"><a href="#ch5">Chapitre 5</a><a class="next" href="#ch7">Chapitre 7 : Instagram et LinkedIn</a></nav>
+</section>
+
+<!-- CHAPITRE 7 -->
+<section class="view" id="v-ch7">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 7 sur 8</span></div>
+  <header class="chead">
+    <span class="num">7</span>
+    <h1>Instagram et LinkedIn</h1>
+    <p class="sub">Une simple vitrine</p>
+  </header>
+
+  <h2>Ce qu'ils ne feront pas</h2>
+  <p>Ils ne te ramèneront pas de clients tout seuls. Ne passe pas tes journées à poster en espérant être repéré, et n'attends pas des milliers de followers. Les jobs viennent des agences, des directeurs de casting et du démarchage écrit (chapitre 4).</p>
+
+  <h2>À quoi ils servent vraiment</h2>
+  <p>Quand une agence ou un directeur de casting reçoit ton message, il va souvent regarder ton compte. Il doit y trouver :</p>
+  <ol>
+    <li>Un profil propre, avec ta photo de portrait en photo de profil.</li>
+    <li>Tes meilleures photos, pas ta vie de tous les jours.</li>
+    <li>Ta phrase en une ligne dans la bio.</li>
+    <li>Ton email pour te contacter.</li>
+  </ol>
+  <p>C'est tout. Une fois en place, tu n'as presque plus à y toucher.</p>
+
+  <h2>Les promesses à éviter</h2>
+  <p>On te promettra parfois des clients, des abonnés ou des castings contre de l'argent : faux comptes, faux agents, formations. Ne paie jamais pour être « repéré » sur un réseau social.</p>
+
+  <nav class="pager"><a href="#ch6">Chapitre 6</a><a class="next" href="#ch8">Chapitre 8 : tenir dans la durée</a></nav>
+</section>
+
+<!-- CHAPITRE 8 -->
+<section class="view" id="v-ch8">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 8 sur 8</span></div>
+  <header class="chead">
+    <span class="num">8</span>
+    <h1>Tenir dans la durée</h1>
+    <p class="sub">Sans tout quitter</p>
+  </header>
+
+  <p>À 40 ans+, personne ne te demande d'avoir 20 ans, ni d'être 100% fit. Les agences et les clients cherchent des gens crédibles, pas des athlètes.</p>
+
+  <div class="note strong-block">
+    <h3>Garde une autre source de revenus</h3>
+    <p>Beaucoup de gens font de la promotion, proposent des formations et te disent de tout quitter, ton travail et le reste, pour devenir mannequin. Surtout, ne le fais pas.</p>
+    <p>C'est un métier où très peu de gens vivent à 100% de leurs cachets.</p>
+    <p>Ne quitte pas ton emploi actuel. Garde au moins une autre source de revenus, pour ne pas être déçu.</p>
+  </div>
+  <p>Choisis un travail qui te laisse de la flexibilité : des horaires souples ou des jours libres, pour pouvoir partir en casting ou en shooting quand on t'appelle.</p>
+
+  <h2>Les autres grandes lignes</h2>
+  <ol>
+    <li><strong>Prends soin de toi sans en faire trop :</strong> dors bien, bouge régulièrement, mange correctement. Sois en forme, pas parfait.</li>
+    <li><strong>Garde ton naturel :</strong> pas de transformation radicale juste avant un shooting. Ton visage et ton corps doivent ressembler à tes photos.</li>
+    <li><strong>Mets tes photos à jour :</strong> si tu changes de coupe, de barbe ou de couleur de cheveux, préviens ton agence et refais des photos.</li>
+    <li><strong>Reste disponible et ponctuel :</strong> arrive à l'heure, reste aimable. C'est ce qui fait qu'on te rappelle.</li>
+    <li><strong>Sois patient :</strong> les débuts peuvent être lents. Continue à démarcher par écrit (chapitre 4).</li>
+  </ol>
+
+  <div class="frame">
+    <h3>Et maintenant ?</h3>
+    <p>Tu as toutes les étapes. Si tu veux un avis personnel sur tes photos, ton style et les photographes à contacter, je le fais en 30 minutes.</p>
+    <p><a class="btn" href="#consulting">Voir le consulting</a></p>
+  </div>
+
+  <nav class="pager"><a href="#ch7">Chapitre 7</a><a class="next" href="#home">Retour au sommaire</a></nav>
+</section>
+
+<!-- CONSULTING -->
+<section class="view" id="v-consulting">
+  <div class="bar"><a href="#home">Sommaire</a><span class="where">Consulting</span></div>
+  <header class="chead">
+    <h1>Le consulting</h1>
+    <p class="sub">50&nbsp;€ pour 30 minutes</p>
+  </header>
+
+  <p>Ce sont mes conseils et mes adresses, obtenus en 30 ans de métier.</p>
+  <p>Tu m'envoies tes photos avant l'appel. Pendant 30 minutes :</p>
+  <ul>
+    <li>je te dis quel est ton style ;</li>
+    <li>je te donne la direction artistique de ton premier test ;</li>
+    <li>je te dirige vers le photographe qui correspond à ton profil ;</li>
+    <li>je t'explique comment contacter les agences.</li>
+  </ul>
+  <p>Tu repars avec un plan précis, sans payer de formation.</p>
+  <p><a class="btn" id="book" href="mailto:wbkearns@icloud.com?subject=Consulting%2030%20minutes&body=Bonjour%20William%2C%0A%0AJe%20souhaite%20r%C3%A9server%2030%20minutes%20de%20consulting.%20Je%20joins%20mes%20photos.%0A%0AMerci">Réserver 30 minutes, 50&nbsp;€</a></p>
+
+  <nav class="pager"><a href="#home">Retour au sommaire</a></nav>
+</section>
+
+</div>
+<script>
+(function () {
+  var views = document.querySelectorAll('.view');
+  var titles = { home: 'Devenir mannequin 40+ : le guide' };
+  function show() {
+    var id = (location.hash || '#home').slice(1);
+    var el = document.getElementById('v-' + id);
+    if (!el) { id = 'home'; el = document.getElementById('v-home'); }
+    for (var i = 0; i < views.length; i++) { views[i].classList.remove('on'); }
+    el.classList.add('on');
+    var h = el.querySelector('h1');
+    document.title = id === 'home' ? titles.home : (h ? h.textContent + ' | Devenir mannequin 40+' : titles.home);
+    window.scrollTo(0, 0);
+  }
+  window.addEventListener('hashchange', show);
+  show();
+})();
+</script>
+</body>
+</html>
