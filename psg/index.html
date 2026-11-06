@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PSG Match Day with a Parisian</title>
+<meta name="description" content="Coffee with a born Parisian & insider addresses for your trip to Paris.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://oliebill.github.io/">
+<meta property="og:title" content="Paris with a Parisian">
+<meta property="og:description" content="My favorite addresses, from a born and raised Parisian. Free tips inside.">
+<meta property="og:image" content="https://oliebill.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://oliebill.github.io/og.png">
+<meta name="theme-color" content="#1c2a3a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Paris Local">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1c2a3a;--ink2:#4a5868;--cream:#f7f3ec;--card:#fff;--line:#e6dfd3;--gold:#a8834a;--gold-soft:#f1e7d6;--ok:#2f6b4f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--cream);color:var(--ink);font:16px/1.55 Inter,system-ui,sans-serif;padding-bottom:84px}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;line-height:1.15;text-wrap:balance}
+p,li{text-wrap:pretty}
+.wrap{max-width:640px;margin:0 auto;padding:0 16px}
+header{background:var(--ink);color:#fff;padding:36px 0 30px}
+.brand{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#d9c39b;margin-bottom:12px}
+header h1{font-size:30px;margin-bottom:10px}
+header p{color:#cfd6de}
+.view{display:none;padding:24px 0}
+.view.on{display:block}
+h2{font-size:30px;margin-bottom:8px}
+.lead{color:var(--ink2);margin-bottom:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px;margin-bottom:14px}
+.card h3{font-size:24px;margin-bottom:6px}
+.card p{color:var(--ink2);font-size:15px}
+.tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+.hero{display:flex;align-items:center;gap:16px;padding:16px}
+.hero img{display:block;width:96px;height:96px;flex:none;border-radius:50%;object-fit:cover}
+.hero .in{padding:0}
+.hero .in h3{margin-bottom:4px;font-size:21px;white-space:nowrap}
+.teasers{margin:10px 0 12px;padding:0;list-style:none}
+.teasers li{padding:7px 0;border-top:1px solid var(--line);font-size:15px;color:var(--ink2)}
+.teasers li:first-child{border-top:0}
+.price{font-family:"Cormorant Garamond",serif;font-size:44px;font-weight:600;line-height:1;margin:10px 0 2px}
+.price small{font-family:Inter,sans-serif;font-size:15px;color:var(--ink2);font-weight:400}
+.checks{list-style:none;margin:14px 0 18px}
+.checks li{padding:5px 0 5px 28px;position:relative;font-size:15px}
+.checks li:before{content:"";position:absolute;left:4px;top:12px;width:12px;height:7px;border-left:2px solid var(--ok);border-bottom:2px solid var(--ok);transform:rotate(-45deg)}
+.btn{display:inline-block;border:0;border-radius:999px;background:var(--ink);color:#fff;font:600 15px Inter,sans-serif;padding:13px 22px;text-decoration:none;cursor:pointer;text-align:center}
+.btn.gold{background:var(--gold)}
+.btn.line{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn.small{padding:9px 16px;font-size:14px}
+.btn.full{display:block;width:100%}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.row .btn{flex:1 1 160px}
+.note{font-size:13px;color:var(--ink2);margin-top:12px}
+.tips{list-style:none;counter-reset:t}
+.tips li{counter-increment:t;position:relative;padding:13px 0 13px 44px;border-bottom:1px solid var(--line)}
+.tips li:before{content:counter(t);position:absolute;left:0;top:13px;width:30px;height:30px;border-radius:50%;background:var(--gold-soft);color:var(--gold);font-weight:600;display:grid;place-items:center;font-size:14px}
+.tips b{display:block;margin-bottom:2px}
+.tips span{color:var(--ink2);font-size:15px}
+.place{padding:14px 0;border-top:1px solid var(--line)}
+.place:first-of-type{border-top:0}
+.place b{display:block;font-size:16px;font-weight:400;color:var(--ink);margin-bottom:3px}
+.place img{display:block;width:100%;border-radius:12px;margin:8px 0 10px}
+.place .addr{margin-top:6px;font-size:14px;color:var(--gold)}
+.place p{font-size:15px;color:var(--ink2)}
+.locked .body{filter:blur(6px);user-select:none;pointer-events:none}
+.lockbar{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--gold-soft);border-radius:10px;padding:12px 14px;margin-top:12px;font-size:14px}
+.locked h3{filter:blur(7px);user-select:none}
+.unlocked h3{filter:none;user-select:auto}
+.unlocked .body{filter:none;user-select:auto;pointer-events:auto}
+.unlocked .lockbar{display:none}
+.soon{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chip{background:var(--gold-soft);border-radius:999px;padding:6px 12px;font-size:14px}
+input[type=text]{width:100%;font:16px Inter,sans-serif;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;margin:10px 0;background:#fff;color:var(--ink)}
+.msg{font-size:14px;min-height:20px;margin-top:4px}
+.msg.err{color:#a33}.msg.ok{color:var(--ok)}
+nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav .wrap{display:flex}
+nav button{flex:1;background:none;border:0;padding:12px 4px 14px;font:500 13px Inter,sans-serif;color:var(--ink2);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px}
+nav button svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.7}
+nav button.on{color:var(--gold)}
+h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-size:28px}
+.badge{display:none;font-size:12px;font-weight:600;color:var(--ok);background:#e5f1ea;border-radius:999px;padding:4px 10px;margin-bottom:12px}
+.unlocked-all .badge{display:inline-block}
+@media (min-width:700px){header h1{font-size:38px}}
+.upsell{margin-top:18px;padding-top:14px;border-top:1px solid var(--line);text-align:center}.upsell p{margin:0 0 10px;font-weight:600}.upsell .btn{width:100%}
+.teasers .num{font-weight:700;color:var(--gold);margin-right:4px}.blur{filter:blur(5px);user-select:none;-webkit-user-select:none}
+.price{color:var(--gold)}
+</style>
+<style>
+body{padding-bottom:30px}
+.photo{display:block;width:100%;border-radius:12px;margin:10px 0 14px}
+.duo{display:flex;gap:8px;margin:10px 0 14px}.duo img{width:calc(50% - 4px);min-width:0;border-radius:12px;display:block;object-fit:cover}
+.teasers .num{font-weight:700;color:var(--gold);margin-right:4px}
+.price{color:var(--gold)}
+details{border-top:1px solid var(--line);padding:10px 0}details:first-of-type{border-top:0}
+summary{cursor:pointer;font-weight:600;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:baseline;gap:12px}summary::-webkit-details-marker{display:none}
+summary:after{content:"+";flex:none;color:var(--gold);font-weight:700}details[open] summary:after{content:"\2212"}
+details p{margin-top:6px}
+.faqh{font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;font-weight:600;margin:18px 0 4px;color:var(--gold)}
+.faqh:first-child{margin-top:0}
+header h1{font-size:clamp(21px,6.4vw,26px);white-space:nowrap}
+.back{display:block;text-align:center;margin:20px 0;color:var(--ink2);font-size:14px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">Bill / Paris Local</div>
+    <h1>PSG Match Day with a Parisian</h1>
+    <p>A real Paris match day: a drink with friends, the Parc des Princes and a hidden French&nbsp;bistro.</p>
+  </div>
+</header>
+<main class="wrap" style="padding-top:24px">
+  <div class="card">
+    <span class="tag">Small group experience</span>
+    <h3>Match day in Paris</h3>
+    <ul class="teasers"><li><span class="num">1.</span> We meet for a drink on the terrace of a friend's brasserie, in the heart of the 8th&nbsp;arrondissement</li><li><span class="num">2.</span> We take the metro straight to the stadium, far from the match day traffic&nbsp;jams</li><li><span class="num">3.</span> The match at the Parc des Princes, Ligue&nbsp;1 or Champions&nbsp;League</li><li><span class="num">4.</span> Lunch or dinner in a hidden French bistro, an 18 minute walk from the&nbsp;stadium</li><li><span class="num">5.</span> Back to our meeting point together after the&nbsp;match</li></ul>
+    <ul class="checks">
+      <li>Sunday matches or Champions&nbsp;League nights</li>
+      <li>We eat before or after the match, depending on kickoff&nbsp;time</li>
+      <li>Minimum 4&nbsp;people</li>
+      <li>Book early, tickets depend on the&nbsp;match</li>
+    </ul>
+    <div class="price" style="font-size:28px;margin-bottom:14px">Price on request</div>
+    <a class="btn gold full" id="waBtn" href="#" target="_blank" rel="noopener">Book on WhatsApp</a>
+    <p class="note">Tell me which match you'd like to see and the size of your group, and I'll get back to you with a&nbsp;price.</p>
+  </div>
+  <a class="back" href="https://oliebill.github.io/">More from Paris with a Parisian</a>
+</main>
+<script>
+document.getElementById("waBtn").href="https://wa.me/33658721169?text="+encodeURIComponent("Hi Bill, I'm interested in a PSG match day. The match and our group size: ");
+</script>
+</body>
+</html>
