@@ -76,6 +76,10 @@ a { color: var(--navy); }
 /* accueil */
 .hero { padding: 2.2rem 0 1.6rem; }
 .hero h1 { font-size: clamp(1.55rem, 8vw, 2.9rem); white-space: nowrap; }
+.proof { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem; margin: 1.3rem 0 0; }
+.proof figure { margin: 0; }
+.proof img { display: block; width: 100%; aspect-ratio: 2 / 3; object-fit: cover; background: var(--line); }
+.proof figcaption { font-family: var(--head); font-size: 0.72rem; line-height: 1.25; color: var(--muted); margin-top: 0.35rem; text-wrap: balance; }
 .hero .sub { font-family: var(--head); font-size: clamp(1.05rem, 4.6vw, 1.4rem); font-weight: 500; color: var(--muted); margin: 0.7rem 0 0; line-height: 1.3; text-wrap: balance; }
 .hero .lead { margin: 1.4rem 0 1.6rem; }
 .row { display: flex; flex-wrap: wrap; gap: 0.8rem; align-items: center; }
@@ -128,7 +132,12 @@ h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
   <div class="hero">
     <h1>Devenir mannequin 40<span class="plus">+</span></h1>
     <p class="sub">Le guide rédigé par un mannequin qui évolue dans cette industrie depuis plus de 30 ans, en France et à l'étranger</p>
-    <p class="lead">Non, non et… non à une formation coûteuse. Ce guide te donne les étapes dans l'ordre, avec ce que j'ai appris sur le terrain.</p>
+    <div class="proof">
+      <figure><img src="m40-4.jpg" alt="William, sourire naturel, lunettes noires, un petit chien blanc dans les bras" width="300" height="450"><figcaption>British Vogue</figcaption></figure>
+      <figure><img src="m40-9.jpg" alt="William allongé sur un lit en pull moutarde, lumière douce" width="300" height="450"><figcaption>Esquire Japan</figcaption></figure>
+      <figure><img src="m40-5.jpg" alt="William en trench beige et casquette plate" width="300" height="450"><figcaption>The English Hatter</figcaption></figure>
+    </div>
+    <p class="lead"><strong>Non, non et… non</strong> à une formation coûteuse. Ce guide te donne les étapes dans l'ordre, avec ce que j'ai appris sur le terrain.</p>
     <div class="row">
       <a class="btn" href="https://paypal.me/Olie0109/19EUR" data-pay19>Acheter le guide, 19&nbsp;€</a>
       <a class="btn ghost" href="#ch1">Lire le chapitre 1 gratuit</a>
@@ -143,9 +152,9 @@ h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
     <a class="tile" href="#buy"><span class="n">3</span><span class="t">Tes premières photos&nbsp;: même avec un iPhone</span></a>
     <a class="tile" href="#buy"><span class="n">4</span><span class="t">Démarcher par email, avec des mails prêts à copier</span></a>
     <a class="tile" href="#buy"><span class="n">5</span><span class="t">Réussir tes castings, chez toi ou en présentiel</span></a>
-    <a class="tile" href="#buy"><span class="n">6</span><span class="t">Contrats, paiement et statut fiscal</span></a>
-    <a class="tile" href="#buy"><span class="n">7</span><span class="t">Instagram et LinkedIn&nbsp;: à quoi ils servent vraiment&nbsp;?</span></a>
-    <a class="tile" href="#buy"><span class="n">8</span><span class="t">Tenir dans la durée, sans tout quitter&nbsp;!</span></a>
+    <a class="tile" href="#buy"><span class="n">6</span><span class="t">Contrat et rémunération</span></a>
+    <a class="tile" href="#buy"><span class="n">7</span><span class="t">Les réseaux sociaux&nbsp;: à quoi ils servent vraiment&nbsp;?</span></a>
+    <a class="tile" href="#buy"><span class="n">8</span><span class="t">Le bon état d'esprit</span></a>
   </div>
 
   <div class="note">
@@ -154,9 +163,10 @@ h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
   </div>
 
   <div class="frame">
-    <h3>Envie d'aller plus loin&nbsp;?</h3>
-    <p>30 minutes avec moi, pour 50&nbsp;€. Tu m'envoies tes photos, je te dis quel est ton style, je te donne la direction artistique de ton premier test, et je te dirige vers le photographe qui te correspond.</p>
-    <p><a class="btn ghost" href="#consulting">Voir le consulting</a></p>
+    <h3>Besoin d'un coup de pouce&nbsp;?</h3>
+    <p>Tu m'envoies tes photos, on s'appelle 30&nbsp;minutes, et je te dis franchement ce qui marche chez toi. On choisit ensemble l'ambiance de ton premier test et le photographe qui te correspond.</p>
+    <p>Le tout pour 50&nbsp;€.</p>
+    <p><a class="btn ghost" href="#consulting">Réserver mes 30 minutes</a></p>
   </div>
 
   <h2 class="sec">Qui écrit ce guide&nbsp;?</h2>
@@ -168,7 +178,7 @@ h2.sec { font-size: 1.45rem; margin: 2.4rem 0 0.9rem; }
 <section class="view" id="v-ch1">
   <div class="bar"><a href="#home">Sommaire</a><span class="where">Chapitre 1 sur 8</span></div>
   <header class="chead">
-    <h1>1&nbsp;- Le marché 40<span class="plus">+</span></h1>
+    <h1>1. Le marché 40<span class="plus">+</span></h1>
     <p class="sub">Qui recrute et pourquoi&nbsp;?</p>
   </header>
 
