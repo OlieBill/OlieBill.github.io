@@ -95,9 +95,14 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
 .price{color:var(--gold)}
 .teasers li:has(.num){padding-left:1.7em;text-indent:-1.7em}.teasers .num{display:inline-block;width:1.45em;text-indent:0;margin-right:0}
 .featured{border:2px solid var(--gold);box-shadow:0 6px 24px rgba(168,131,74,.18)}details.stops summary{cursor:pointer;font-weight:600;color:var(--gold);margin:6px 0 10px}details.stops{margin-bottom:6px}
+body:not(.promo) .promo-only{display:none!important}
+body.promo .paid-only{display:none!important}
+.promo-line{font-size:17px;font-weight:700;color:var(--gold);margin-top:4px}
+.review{font-size:14px;margin-top:14px;color:var(--ink2)}
+nav button .promo-only{line-height:1.15;text-align:center}
 </style>
 </head>
-<body>
+<body class="promo">
 
 <header>
   <div class="wrap">
@@ -122,7 +127,9 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
   <div class="card featured" style="margin-top:22px">
     <span class="tag" style="font-family:'Bricolage Grotesque',Inter,sans-serif;font-size:21px;font-weight:800;letter-spacing:.06em;color:#000">Start here</span>
     <h3 style="color:#8a6a4f">My secret&nbsp;book</h3>
-    <p style="font-size:14px;margin-top:2px">(Cheaper than a pack of&nbsp;cigarettes)</p>
+    <p class="paid-only" style="font-size:14px;margin-top:2px">(Cheaper than a pack of&nbsp;cigarettes)</p>
+    <p class="promo-only promo-line">Free until December&nbsp;31st,&nbsp;2026<br>(usually&nbsp;€14)</p>
+    <p class="promo-only" style="margin-top:10px">Small, intimate places you will never find in the big guidebooks. This is the real experience of a Parisian who has tracked down every one of these addresses over the&nbsp;years.</p>
     <button data-go="guides" style="display:block;background:none;border:0;padding:0;margin:18px 0 20px;font:800 21px 'Bricolage Grotesque',Inter,sans-serif;letter-spacing:.06em;color:#000;text-transform:uppercase;cursor:pointer">See the guide</button>
     <p>The addresses I <span style="color:var(--gold);font-weight:600">only</span> give to my&nbsp;friends.</p>
     <ul class="teasers">
@@ -136,7 +143,9 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
       <li>A whisky bar where a single dram can cost up to&nbsp;€2,000.</li>
       <li>And many more tips and secret little&nbsp;addresses.</li>
     </ul>
-    <a class="btn gold full" href="https://paypal.me/Olie0109/14EUR" data-pay14 target="_blank" rel="noopener">Get my guide for&nbsp;€14</a>
+    <a class="btn gold full paid-only" href="https://paypal.me/Olie0109/14EUR" data-pay14 target="_blank" rel="noopener">Get my guide for&nbsp;€14</a>
+    <button class="btn gold full promo-only" data-go="guides">Open the guide, it's&nbsp;free</button>
+    <p class="promo-only review">Enjoyed it? A few kind words in a Facebook travel group, or anywhere you talk about Paris, would mean a lot to&nbsp;me.</p>
   </div>
   <div class="card" style="margin-top:22px">
       <span class="tag">When I'm in town</span>
@@ -512,9 +521,16 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
 
 <!-- UNLOCK -->
 <section class="view" id="v-unlock">
-  <h2>Unlock the guide</h2>
-  <p class="lead">One payment, no subscription. Yours&nbsp;to&nbsp;keep.</p>
-  <div class="card">
+  <h2 class="promo-only" style="white-space:nowrap;font-size:clamp(20px,6.4vw,34px)">Free until December&nbsp;31st,&nbsp;2026</h2>
+  <div class="card promo-only">
+    <div class="price">€0 <small>(usually €14)</small></div>
+    <p>Small, intimate places you will never find in the big guidebooks. This is the real experience of a Parisian who has tracked down every one of these addresses over the&nbsp;years.</p>
+    <button class="btn gold full" data-go="guides" style="margin-top:16px">Open the guide, it's&nbsp;free</button>
+    <p class="review">Enjoyed it? A few kind words in a Facebook travel group, or anywhere you talk about Paris, would mean a lot to&nbsp;me.</p>
+  </div>
+  <h2 class="paid-only">Unlock the guide</h2>
+  <p class="lead paid-only">One payment, no subscription. Yours&nbsp;to&nbsp;keep.</p>
+  <div class="card paid-only">
     <div class="price">€14 <small>(one time)</small></div>
     <ul class="checks">
       <li>All my personal&nbsp;addresses</li>
@@ -524,7 +540,7 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
     <a class="btn gold full" href="https://paypal.me/Olie0109/14EUR" data-pay14 target="_blank" rel="noopener">Pay with PayPal</a>
     <p class="note">Card or PayPal account. Right&nbsp;after payment, you come back here with the guide unlocked and your access&nbsp;code.</p>
   </div>
-  <div class="card">
+  <div class="card paid-only">
     <h3>Already paid?</h3>
     <p>Enter your access code&nbsp;below.</p>
     <input type="text" id="code" placeholder="Access code" autocomplete="off" autocapitalize="characters">
@@ -549,7 +565,7 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
   <div class="wrap">
     <button class="on" data-go="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Home</button>
     <button data-go="guides"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>Guide</button>
-    <button data-go="unlock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Unlock</button>
+    <button data-go="unlock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span class="paid-only">Unlock</span><span class="promo-only">Free until December&nbsp;31st,&nbsp;2026</span></button>
     <button data-go="about"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>About</button>
   </div>
 </nav>
@@ -574,6 +590,8 @@ function unlockAll(){
   document.querySelectorAll("[data-lock]").forEach(el=>el.classList.add("unlocked"));
   document.body.classList.add("unlocked-all");
 }
+const PROMO = Date.now() < Date.parse("2027-01-01T00:00:00+01:00");
+if(PROMO){ unlockAll(); } else { document.body.classList.remove("promo"); }
 try{ if(localStorage.getItem("pl_unlocked")==="1") unlockAll(); }catch(e){}
 
 async function sha(t){
