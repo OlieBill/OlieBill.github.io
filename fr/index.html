@@ -106,9 +106,14 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
 .stats div{flex:1;background:rgba(255,255,255,.07);border-radius:12px;padding:12px 4px;text-align:center}
 .stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:600;color:#d9c39b;line-height:1;margin-bottom:4px}
 .stats span{font-size:12px;color:#cfd6de}
+body:not(.promo) .promo-only{display:none!important}
+body.promo .paid-only{display:none!important}
+.promo-line{font-size:17px;font-weight:700;color:var(--gold);margin-top:4px}
+.review{font-size:14px;margin-top:14px;color:var(--ink2)}
+nav button .promo-only{line-height:1.15;text-align:center}
 </style>
 </head>
-<body>
+<body class="promo">
 
 <header>
   <div class="wrap">
@@ -135,11 +140,13 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
   <div class="card feature">
     <span class="tag">Mon guide d'initié</span>
     <h3>Mon petit carnet d'adresses</h3>
+    <p class="promo-only promo-line">Gratuit jusqu'au 31&nbsp;décembre&nbsp;2026<br>(au&nbsp;lieu de&nbsp;14&nbsp;€)</p>
+    <p class="promo-only" style="margin-top:10px">Des petites adresses intimistes que vous ne trouverez jamais dans les grands guides. C'est l'expérience et le vécu d'un vrai Parisien, qui a déniché toutes ces adresses au fil des&nbsp;années.</p>
     <p class="sub">Le Paris d'un Parisien de naissance, loin des listes qu'on trouve&nbsp;partout.</p>
     <div class="stats">
       <div><b>40+</b><span>adresses&nbsp;testées</span></div>
       <div><b>7</b><span>rubriques</span></div>
-      <div><b>14&nbsp;€</b><span>une seule&nbsp;fois</span></div>
+      <div class="paid-only"><b>14&nbsp;€</b><span>une seule&nbsp;fois</span></div><div class="promo-only"><b>0&nbsp;€</b><span>jusqu'au 31&nbsp;déc.&nbsp;2026</span></div>
     </div>
     <p style="margin-top:16px">Les adresses que je&nbsp;donne <span style="color:#d9c39b;font-weight:600">uniquement</span> à mes&nbsp;amis.</p>
     <ul class="teasers">
@@ -153,9 +160,11 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
       <li>Un bar à whisky où un seul verre peut coûter jusqu'à 2&nbsp;000&nbsp;€.</li>
       <li>Et plein d'autres petites adresses&nbsp;secrètes.</li>
     </ul>
-    <a class="btn gold full" href="https://paypal.me/Olie0109/14EUR" data-pay14 target="_blank" rel="noopener">Payer 14&nbsp;€ avec PayPal</a>
-    <button class="btn line full" data-go="guides" style="margin-top:10px">Feuilleter le guide</button>
-    <p class="note">Paiement unique, sans abonnement. Le guide reste sur votre téléphone, rien à&nbsp;télécharger.</p>
+    <a class="btn gold full paid-only" href="https://paypal.me/Olie0109/14EUR" data-pay14 target="_blank" rel="noopener">Payer 14&nbsp;€ avec PayPal</a>
+    <button class="btn gold full promo-only" data-go="guides">Ouvrir le guide, c'est&nbsp;gratuit</button>
+    <p class="promo-only review">Vous avez aimé&nbsp;? Quelques mots sympas dans un groupe Facebook de voyage, ou partout où vous parlez de Paris, ça m'aide&nbsp;énormément.</p>
+    <button class="btn line full paid-only" data-go="guides" style="margin-top:10px">Feuilleter le guide</button>
+    <p class="note paid-only">Paiement unique, sans abonnement. Le guide reste sur votre téléphone, rien à&nbsp;télécharger.</p>
   </div>
 
   <div class="card">
@@ -484,9 +493,16 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
 
 <!-- UNLOCK -->
 <section class="view" id="v-unlock">
-  <h2>Débloquer le&nbsp;guide</h2>
-  <p class="lead">Un seul paiement, sans abonnement. À&nbsp;vous pour&nbsp;toujours.</p>
-  <div class="card">
+  <h2 class="promo-only" style="white-space:nowrap;font-size:clamp(18px,5.6vw,34px)">Gratuit jusqu'au 31&nbsp;décembre&nbsp;2026</h2>
+  <div class="card promo-only">
+    <div class="price">0&nbsp;€ <small>(au lieu de 14&nbsp;€)</small></div>
+    <p>Des petites adresses intimistes que vous ne trouverez jamais dans les grands guides. C'est l'expérience et le vécu d'un vrai Parisien, qui a déniché toutes ces adresses au fil des&nbsp;années.</p>
+    <button class="btn gold full" data-go="guides" style="margin-top:16px">Ouvrir le guide, c'est&nbsp;gratuit</button>
+    <p class="review">Vous avez aimé&nbsp;? Quelques mots sympas dans un groupe Facebook de voyage, ou partout où vous parlez de Paris, ça m'aide&nbsp;énormément.</p>
+  </div>
+  <h2 class="paid-only">Débloquer le&nbsp;guide</h2>
+  <p class="lead paid-only">Un seul paiement, sans abonnement. À&nbsp;vous pour&nbsp;toujours.</p>
+  <div class="card paid-only">
     <div class="price">14 € <small>(une seule fois)</small></div>
     <ul class="checks">
       <li>Toutes mes adresses&nbsp;personnelles</li>
@@ -496,7 +512,7 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
     <a class="btn gold full" href="https://paypal.me/Olie0109/14EUR" data-pay14 target="_blank" rel="noopener">Payer avec PayPal</a>
     <p class="note">Carte bancaire ou compte PayPal. Juste&nbsp;après le paiement, vous revenez ici avec le guide débloqué et votre code&nbsp;d'accès.</p>
   </div>
-  <div class="card">
+  <div class="card paid-only">
     <h3>Déjà payé&nbsp;?</h3>
     <p>Entrez votre code d'accès&nbsp;ci‑dessous.</p>
     <input type="text" id="code" placeholder="Code d'accès" autocomplete="off" autocapitalize="characters">
@@ -521,7 +537,7 @@ h2.group{margin-top:30px;padding-top:18px;border-top:2px solid var(--gold);font-
   <div class="wrap">
     <button class="on" data-go="home"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>Accueil</button>
     <button data-go="guides"><svg viewBox="0 0 24 24"><path d="M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14"/></svg>Guide</button>
-    <button data-go="unlock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>Débloquer</button>
+    <button data-go="unlock"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span class="paid-only">Débloquer</span><span class="promo-only">Gratuit jusqu'au 31&nbsp;décembre&nbsp;2026</span></button>
     <button data-go="about"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg>À propos</button>
   </div>
 </nav>
@@ -544,6 +560,8 @@ function unlockAll(){
   document.querySelectorAll("[data-lock]").forEach(el=>el.classList.add("unlocked"));
   document.body.classList.add("unlocked-all");
 }
+const PROMO = Date.now() < Date.parse("2027-01-01T00:00:00+01:00");
+if(PROMO){ unlockAll(); } else { document.body.classList.remove("promo"); }
 try{ if(localStorage.getItem("pl_unlocked")==="1") unlockAll(); }catch(e){}
 
 async function sha(t){
