@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Donahugh, Photo Production</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#111;--paper:#fafaf8;--muted:#6b6b6b;--line:#e4e2dc;--gold:#a8874a}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{background:var(--paper);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-weight:300;font-size:16px;line-height:1.65}
+  img{display:block;width:100%;height:auto}
+  p{text-wrap:pretty}
+  h1,h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.1}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+
+  header{padding:46px 0 30px;text-align:center}
+  .kicker{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  header h1{font-size:clamp(24px,6.6vw,56px);margin:12px 0 8px;white-space:nowrap}
+  header .ig{display:inline-block;margin-top:6px;font-size:14px;color:var(--ink)}
+  header .sub{color:var(--muted);font-size:15px}
+
+  .gallery{columns:2;column-gap:10px}
+  @media(min-width:760px){.gallery{columns:3;column-gap:14px}}
+  .gallery button{display:block;width:100%;margin:0 0 10px;border:0;padding:0;background:none;cursor:zoom-in;break-inside:avoid}
+  @media(min-width:760px){.gallery button{margin-bottom:14px}}
+
+  section{padding:46px 0 6px}
+  section h2{font-size:clamp(30px,7vw,40px);margin-bottom:16px;white-space:nowrap}
+  .about p{max-width:640px}
+  .about p+p{margin-top:14px}
+
+  .contact{padding-bottom:70px}
+  .contact p{margin-bottom:22px}
+  .lines{display:grid;gap:14px}
+  .lines a{display:block;padding:16px 18px;border:1px solid var(--ink);color:var(--ink);text-decoration:none}
+  .lines a b{display:block;font-weight:500;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+  .lines a:hover{background:var(--ink);color:#fff}
+  footer{text-align:center;font-size:12px;color:var(--muted);padding:0 0 40px}
+
+  .lb{position:fixed;inset:0;background:rgba(10,10,10,.94);display:none;align-items:center;justify-content:center;z-index:9;padding:16px}
+  .lb.on{display:flex}
+  .lb img{max-width:100%;max-height:100%;width:auto;object-fit:contain}
+  .lb button{position:absolute;top:12px;right:16px;background:none;border:0;color:#fff;font-size:34px;line-height:1;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Photo production</div>
+    <h1>Donahugh</h1>
+    <div class="sub">Eyewear</div>
+    <a class="ig" href="https://donahughshop.com">donahughshop.com</a>
+  </header>
+
+  <div class="gallery" id="gallery">
+    <button><img src="duo.jpg" alt="Two models in sunglasses, concrete hall" loading="lazy"></button>
+    <button><img src="purple-jacket.jpg" alt="Black sunglasses and purple work jacket" loading="lazy"></button>
+    <button><img src="closeup.jpg" alt="Close up, amber sunglasses" loading="lazy"></button>
+    <button><img src="scarf.jpg" alt="Knit polo, silk scarf and sunglasses" loading="lazy"></button>
+    <button><img src="beanie.jpg" alt="Beanie and round sunglasses" loading="lazy"></button>
+    <button><img src="turtleneck-bw.jpg" alt="Black and white portrait with glasses" loading="lazy"></button>
+    <button><img src="red-shirt.jpg" alt="Red shirt and black sunglasses" loading="lazy"></button>
+  </div>
+
+  <section class="about">
+    <h2>How we work</h2>
+    <p>I organise small photo productions for brands with two or three photographer friends. You send your pieces and a moodboard, we agree on it together, and we shoot.</p>
+    <p>I can bring in models and a makeup artist, which keeps the budget reasonable. I also have more than 30 years of experience in front of the camera, in France and around the world.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Bill Kearns, Paris</p>
+    <div class="lines">
+      <a href="https://wa.me/33658721169"><b>WhatsApp</b>+33 6 58 72 11 69</a>
+      <a href="mailto:wbkearns@icloud.com"><b>Email</b>wbkearns@icloud.com</a>
+      <a href="https://www.instagram.com/oliewilliam/"><b>Instagram</b>@oliewilliam</a>
+    </div>
+  </section>
+</div>
+
+
+<div class="lb" id="lb"><button aria-label="Close">×</button><img id="lbImg" alt=""></div>
+<script>
+  const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+  document.querySelectorAll('#gallery button').forEach(b=>b.addEventListener('click',()=>{const i=b.querySelector('img');lbImg.src=i.src;lbImg.alt=i.alt;lb.classList.add('on')}));
+  lb.addEventListener('click',()=>lb.classList.remove('on'));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('on')});
+</script>
+</body>
+</html>
